@@ -1,0 +1,157 @@
+:root {
+    --background-color:#000000;
+    --text-color: #ffffff;
+    --border-color: #009688;
+    --background-card:#1F1F1F;
+    --searchbox-background:#97a0af
+}
+
+body {
+    background-color: var(--background-color); /* Light gray background */
+    color: var(--text-color);
+    margin: 0;
+    font-family: 'Open Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1.5em; /* Larger font for the title */
+    margin: 0; /* Remove default margin */
+}
+
+h3 {
+    font-size: 1.2em; /* Slightly smaller for the day */
+    margin: 4px 0; /* Margin above and below */
+}
+
+.input-group {
+    position: relative; /* Allows absolute positioning of the icon */
+    max-width: 302px; /* Set the width to 372px */
+    margin-top: 4px;
+}
+
+.search-box {
+    width: 100%; /* Full width of parent */
+    box-sizing: border-box; /* Include padding and border in width */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 40px 10px 30px; 
+    color:var(--text-color);
+    background-color: var(--background-color);
+    outline: none; /* Remove outline */
+    border-color: var(--background-color);
+    border-width: 1px;
+}
+
+.search-box:focus {
+    outline: none; /* Remove outline */
+    border-color: var(--text-color);
+    border-width: 1px;
+}
+
+.input-group i {
+    position: absolute; /* Position icon */
+    left: 10px; /* Space from the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical position */
+    color: #888; /* Gray color for icon */
+}
+
+.time-display {
+    display: none; /* Initially hidden */
+    margin-top: 20px; /* Margin above the time display */
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.results-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    max-height: 150px; /* Limit the height */
+    overflow-y: auto; /* Allow scrolling if needed */
+    border: 1px solid #ccc; /* Border around the list */
+    border-radius: 4px; /* Rounded corners */
+    background-color: var(--background-color);
+    position: absolute; /* Position dropdown directly below input */
+    width: 100%; /* Match the width of the input */
+    z-index: 1000; /* Ensure dropdown appears above other content */
+    display: none; /* Start hidden */
+    max-width: 300px; 
+}
+
+.results-list li {
+    padding: 10px 15px; /* Padding for list items */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.results-list li:hover {
+    background-color: var(--text-color); /* Change background on hover */
+    color: var(--background-color);
+}
+
+#time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 213px;
+    height: 95px;
+    border-radius: 12px;
+    background-color: var(--background-card);
+    padding-inline: 24px;
+}
+
+.timer-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 47px;
+    margin: 24px;
+    gap: 24px;
+}
+
+.timer-display div :nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400px;
+    line-height: 32px;
+    letter-spacing: 1%;
+    font-size: 32px;
+    width: 19px;
+    height: 32px;
+    margin: auto;
+}
+
+.timer-display div :nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400px;
+    font-size: 11px;
+    width: 32px;
+    height: 15px;
+}
+
+.country-display {
+    position: absolute;
+    margin-top: -42px;
+    margin-left: -161px;
+    font-size:  11px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+#day {
+    margin: 16px;
+}
+
+.daynight {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 224px;
+}
