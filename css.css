@@ -14,6 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
 }
 
 h2 {
@@ -42,12 +43,14 @@ h3 {
     outline: none; /* Remove outline */
     border-color: var(--background-color);
     border-width: 1px;
+    max-width: 300px; 
 }
 
 .search-box:focus {
     outline: none; /* Remove outline */
     border-color: var(--text-color);
     border-width: 1px;
+    color:var(--text-color);
 }
 
 .input-group i {
@@ -139,7 +142,7 @@ h3 {
 
 .country-display {
     position: absolute;
-    margin-top: -42px;
+    margin-top: -44px;
     margin-left: -161px;
     font-size:  11px;
     font-weight: 200;
